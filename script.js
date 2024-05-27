@@ -1,9 +1,8 @@
-let computerChoice = Math.floor(Math.random() * 3);
-let humanChoice = prompt("Rock, paper, or scissors?")
 let humanScore = 0
 let computerScore = 0
 
 function getComputerChoice() {
+    let computerChoice = Math.floor(Math.random() * 3);
     if (computerChoice == 0) {
         return "rock";
     }
@@ -16,14 +15,24 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    if (humanChoice.toLowerCase() == "rock") {
-        return "rock"
-    } else if (humanChoice.toLowerCase() == "paper") {
-        return "paper"
-    } else if (humanChoice.toLowerCase() == "scissors") {
-        return "scissors"
-    } else {
-        return "Invalid option. Please try again!"
+    let correctInput = false;
+
+    while (!correctInput) {
+        let humanChoice = prompt("Rock, paper, or scissors?")
+        if (humanChoice == null) {
+            break;
+        } else if (humanChoice.toLowerCase() == "rock") {
+            correctInput = true;
+            return "rock"
+        } else if (humanChoice.toLowerCase() == "paper") {
+            correctInput = true;
+            return "paper"
+        } else if (humanChoice.toLowerCase() == "scissors") {
+            correctInput = true;
+            return "scissors"
+        } else {
+            alert("Invalid option. Please try again!");
+        }
     }
 }
 
@@ -52,6 +61,10 @@ function playRound(humanChoice, computerChoice) {
         humanScore += 1
         return "You win! Scissors beats paper"
     }
+}
+
+function playGame(playRound) {
+    
 }
 
 const humanSelection = getHumanChoice();

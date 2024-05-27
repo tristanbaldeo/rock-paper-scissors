@@ -63,11 +63,18 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame(playRound) {
-    
+function playGame() {
+    while (humanScore < 5 && computerScore < 5) {
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        alert(playRound(humanSelection, computerSelection) +  `\nHuman score: ${humanScore}` + `\nComputer score: ${computerScore}`)
+
+    if (humanScore === 5) {
+        alert(`You win! You beat the computer in the series ${humanScore}-${computerScore}`)
+    } else if (computerScore === 5) {
+        alert(`You lose! The computer wins the series ${computerScore}-${humanScore}`)
+    }}
 }
 
-const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
-
-alert(playRound(humanSelection, computerSelection) +  `\nHuman score: ${humanScore}` + `\nComputer score: ${computerScore}`)
+playGame();

@@ -83,12 +83,20 @@ function checkWinner(result) {
     if (humanScore === 5) {
         let finalResult = `You win the series ${humanScore}-${computerScore}!`
         alert(finalResult);
+        resetGame();
     } else if (computerScore === 5) {
         let finalResult = `You lose the series ${computerScore}-${humanScore}!`
         alert(finalResult);
+        resetGame();
     } else {
         alert(result);
     }
+}
+
+function resetGame() {
+    humanScore = 0;
+    computerScore = 0;
+    updateScore();
 }
 
 // function playGame() {

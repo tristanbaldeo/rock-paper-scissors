@@ -64,18 +64,31 @@ function playRound(humanChoice) {
         result = "You win! Scissors beats paper"
     }
 
-    displayResult(humanChoice, computerChoice);
+    // displayResult(humanChoice, computerChoice);
     updateScore();
+    checkWinner(result);
 }
 
-function displayResult(humanChoice, computerChoice) {
-    document.querySelector(".player-result").textContent = `You picked ${humanChoice}!`;
-    document.querySelector(".cpu-result").textContent = `Computer picked ${computerChoice}!`;
-}
+// function displayResult(humanChoice, computerChoice) {
+//     document.querySelector(".player-result").textContent = `You picked ${humanChoice}!`;
+//     document.querySelector(".cpu-result").textContent = `Computer picked ${computerChoice}!`;
+// }
 
 function updateScore() {
     document.querySelector(".player-score").textContent = `You: ${humanScore}`;
     document.querySelector(".cpu-score").textContent = `Computer: ${computerScore}`;
+}
+
+function checkWinner(result) {
+    if (humanScore === 5) {
+        let finalResult = `You win the series ${humanScore}-${computerScore}!`
+        alert(finalResult);
+    } else if (computerScore === 5) {
+        let finalResult = `You lose the series ${computerScore}-${humanScore}!`
+        alert(finalResult);
+    } else {
+        alert(result);
+    }
 }
 
 // function playGame() {

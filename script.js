@@ -65,11 +65,17 @@ function playRound(humanChoice) {
     }
 
     displayResult(humanChoice, computerChoice);
+    updateScore();
 }
 
 function displayResult(humanChoice, computerChoice) {
     document.querySelector(".player-result").textContent = `You picked ${humanChoice}!`;
-    document.querySelector(".cpu-result").textContent = `Computer picked ${computerChoice}!`
+    document.querySelector(".cpu-result").textContent = `Computer picked ${computerChoice}!`;
+}
+
+function updateScore() {
+    document.querySelector(".player-score").textContent = `You: ${humanScore}`;
+    document.querySelector(".cpu-score").textContent = `Computer: ${computerScore}`;
 }
 
 // function playGame() {

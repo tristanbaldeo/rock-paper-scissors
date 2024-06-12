@@ -14,27 +14,27 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
-    let correctInput = false;
+// function getHumanChoice() {
+//     let correctInput = false;
 
-    while (!correctInput) {
-        let humanChoice = prompt("Rock, paper, or scissors?")
-        if (humanChoice == null) {
-            break;
-        } else if (humanChoice.toLowerCase() == "rock") {
-            correctInput = true;
-            return "rock"
-        } else if (humanChoice.toLowerCase() == "paper") {
-            correctInput = true;
-            return "paper"
-        } else if (humanChoice.toLowerCase() == "scissors") {
-            correctInput = true;
-            return "scissors"
-        } else {
-            alert("Invalid option. Please try again!");
-        }
-    }
-}
+//     while (!correctInput) {
+//         let humanChoice = prompt("Rock, paper, or scissors?")
+//         if (humanChoice == null) {
+//             break;
+//         } else if (humanChoice.toLowerCase() == "rock") {
+//             correctInput = true;
+//             return "rock"
+//         } else if (humanChoice.toLowerCase() == "paper") {
+//             correctInput = true;
+//             return "paper"
+//         } else if (humanChoice.toLowerCase() == "scissors") {
+//             correctInput = true;
+//             return "scissors"
+//         } else {
+//             alert("Invalid option. Please try again!");
+//         }
+//     }
+// }
 
 function playRound(humanChoice, computerChoice) {
     console.log(`You picked ${humanChoice}!`)
@@ -78,3 +78,18 @@ function playRound(humanChoice, computerChoice) {
 // }
 
 // playGame();
+
+const rock = document.querySelector("#rock");
+rock.addEventListener("click", () => {
+    playRound("rock");
+});
+
+const paper = document.querySelector("#paper");
+paper.addEventListener("click", () => {
+    playRound("paper");
+});
+
+const scissors = document.querySelector("#scissors");
+scissors.addEventListener("click", () => {
+    playRound("scissors");
+});

@@ -64,14 +64,15 @@ function playRound(humanChoice) {
         result = "You win! Scissors beats paper"
     }
 
-    displayResult(humanChoice, computerChoice);
+    displayResult(humanChoice, computerChoice, result);
     updateScore();
     checkWinner(result);
 }
 
-function displayResult(humanChoice, computerChoice) {
+function displayResult(humanChoice, computerChoice, result) {
     document.querySelector(".player-result").textContent = `You picked ${humanChoice}!`;
     document.querySelector(".cpu-result").textContent = `Computer picked ${computerChoice}!`;
+    document.querySelector(".result").textContent = `${result}`;
 }
 
 function updateScore() {

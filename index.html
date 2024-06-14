@@ -11,44 +11,52 @@
     </head>
     <body>
         <main class="main">
-            <div class="rock-side">
-                <div class="rock-container">
-                    <div class="rock-button">
-                        <button id="rock">Rock</button>
-                    </div>
+            <div class="player-choice">
+                <h1 class="player-header">Player's Choice</h1>
+                <div class="player-choice-box">
+                    <div class="player-item-box"></div>
+                    <p class="player-result"></p>
                 </div>
             </div>
 
-            <div class="paper-side">
-                <div class="paper-container">
-                    <div class="paper-button">
-                        <button id="paper">Paper</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="scissors-side">
-                <div class="scissors-container">
-                    <div class="scissors-button">
-                        <button id="scissors">Scissors</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="score-bar">
-                <div class="score-container">
-                    <div class="results">
-                        <p class="player-result"></p>
-                        <p class="cpu-result"></p>
-                    </div>
-
-                    <div class="score">
-                        <p class="player-score">You: 0</p>
-                        <p class="cpu-score">CPU: 0</p>
-                    </div>
+            <div class="cpu-choice">
+                <h1 class="cpu-header">CPU's Choice</h1>
+                <div class="cpu-choice-box">
+                    <div class="cpu-item-box"></div>
+                    <p class="cpu-result"></p>
                 </div>
             </div>
         </main>
+
+        <section class="game-choices">
+            <div class="rock-container">
+                <div class="rock-button">
+                    <button id="rock">Rock</button>
+                    <p class="rock-text">Rock</p>
+                </div>
+            </div>
+
+            <div class="paper-container">
+                <div class="paper-button">
+                    <button id="paper">Paper</button>
+                    <p class="paper-text">Paper</p>
+                </div>
+            </div>
+
+            <div class="scissors-container">
+                <div class="scissors-button">
+                    <button id="scissors">Scissors</button>
+                    <p class="scissors-text">Scissors</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="game-score">
+            <div class="score">
+                <p class="player-score">You: 0</p>
+                <p class="cpu-score">CPU: 0</p>
+            </div>
+        </section>
         <script src="script.js"></script>
     </body>
 </html>

@@ -10,21 +10,13 @@ body {
 }
 
 .main {
-    background-color: #9DBF9E;
+    background-color: #fbfbfb;
     height: 60vh;
 }
 
 .main-container {
     display: flex;
     justify-content: space-evenly;
-}
-
-.player-header {
-    color: #30323D;
-}
-
-.cpu-header {
-    color: #30323D;
 }
 
 .player-result, .cpu-result {
@@ -36,10 +28,11 @@ body {
 }
 
 .game-choices {
-    background-color: #90b091;
+    background-color: #f1f1f1;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    gap: 96px;
     height: 20vh;
 }
 
@@ -47,13 +40,21 @@ body {
     border: 4px solid;
     padding: 12px;
     border-radius: 8px;
-    background-color: #90b091;
+    background-color: #f1f1f1;
     cursor: pointer;
     appearance: none;
 }
 
-#rock:hover, #paper:hover, #scissors:hover {
-    background-color: #85a386;
+#paper:hover {
+    background-color: #afe4ec;
+}
+
+#rock:hover {
+    background-color: #ecafaf;
+}
+
+#scissors:hover {
+    background-color: #afecaf;
 }
 
 #rock img, #paper img, #scissors img {
@@ -61,7 +62,7 @@ body {
 }
 
 .game-score {
-    background-color: #9DBF9E;
+    background-color: #fbfbfb;
     display: flex;
     height: 20vh;
     justify-content: space-evenly;
@@ -71,4 +72,15 @@ body {
 .player-score, .cpu-score {
     font-weight: 500;
     font-size: 24px;
+}
+
+.player-item-box, .cpu-item-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+.player-choice-img, .cpu-choice-img {
+    max-width: 188px;
+    height: auto;
 }

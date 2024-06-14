@@ -38,6 +38,10 @@ function getComputerChoice() {
 
 function playRound(humanChoice) {
     let computerChoice = getComputerChoice();
+
+    document.getElementsByClassName(".player-choice-img").src = `img/${humanChoice}-svgrepo-com.svg`;
+    document.getElementsByClassName(".cpu-choice-img").src = `img/${computerChoice}-svgrepo-com.svg`;
+    
     console.log(`You picked ${humanChoice}!`)
     console.log(`Computer picked ${computerChoice}!`)
 
@@ -70,6 +74,8 @@ function playRound(humanChoice) {
 }
 
 function displayResult(humanChoice, computerChoice, result) {
+    document.querySelector(".player-choice-img").src = `img/${humanChoice}-svgrepo-com.svg`;
+    document.querySelector(".cpu-choice-img").src = `img/${computerChoice}-svgrepo-com.svg`;
     document.querySelector(".player-result").textContent = `You picked ${humanChoice}!`;
     document.querySelector(".cpu-result").textContent = `Computer picked ${computerChoice}!`;
     document.querySelector(".result").textContent = `${result}`;
